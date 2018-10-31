@@ -6,15 +6,18 @@ using System.Threading.Tasks;
 
 namespace LemonadeStandUserStories
 {
-    public class Store
+    public class Assets
     {
         //members variables 
+        public int cash;
+        public int inventory;
 
         //constructor
 
         //member modifier
-        public void NewStore()
+
         {
+
         }
     }
 }
