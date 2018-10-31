@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-    public class BuyLogic
+    public class BuyLogic 
     {
         //members variables
         public int Temperature; 

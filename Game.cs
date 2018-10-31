@@ -1,7 +1,7 @@
 ﻿using System;
 namespace LemonadeStandUserStories
 {
-    public abstract class Game
+    public abstract class Game : Program
     {
         //members variables 
         public Player newPlayer;

@@ -9,4 +9,7 @@
     <PackageReference Include="System.Collections" Version="4.3.0" />
     <PackageReference Include="System.Configuration.Abstractions" Version="2.0.2.45" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Monetary.cs" />
+  </ItemGroup>
 </Project>

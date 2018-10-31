@@ -8,23 +8,12 @@ namespace LemonadeStandUserStories
 {
     public class Customer
     {
-        //members variables 
-       
-        public class BuyLogic BuyingCustomer; 
-
-        //constructor
-        Random randm = new Random();
-        int rand_number = randm.NextInt32();
-        Console.WriteLine(rand_number);
-       
-
-        //member methods
-        Random randm = new Random();
-        bool rand_true = randm.Next(b);
-
-
-        int rand_card_value = randm.NextInt32();
+        private bool thirsty;
+        private bool resident;
+        private bool spareChange;
+        private bool rain;
 
     }
 
 }
+
