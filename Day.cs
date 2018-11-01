@@ -10,14 +10,10 @@ namespace LemonadeStandUserStories
     {
         //members variables 
         public Weather Forcast;
-        public Customer buyLogic;
-        public DayOfWeek
 
-       
-        //constructor
-
-        //member modifier
+    }  
+        
 
 
-    }
+    
 }
