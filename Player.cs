@@ -12,9 +12,9 @@ namespace LemonadeStandUserStories
         public int Monetary;
         public int Inventory;
 
-       
+
         public abstract void PlayerResources();
         public abstract void DailyRecipe();
-      
+
     }
 }

@@ -6,13 +6,30 @@ using System.Threading.Tasks;
 
 namespace LemonadeStandUserStories
 {
-    class Program 
+    public class Program 
     {
-        public Game newGame;
-
-        static void Main(string[] args)
+        static void Main()
         {
-            Console.WriteLine("Hello World!");
+            {
+                Console.WriteLine("Would you like to play LemonadeStand? yes/no");
+                string answer = Console.ReadLine().ToLower();
+                if (answer == "yes")
+                {
+                    Game game = new Game();
+                    game.ExecuteGame();
+
+                }
+                else if (answer == "no")
+                {
+                    Console.WriteLine("Thanks for playing!");
+                    Environment.Exit(0);
+                }
+                else
+                {
+                    Console.WriteLine("Oops, Wrong input. Please choose yes or no");
+                    Main();
+                }
+            }
         }
     }
 }

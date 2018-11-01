@@ -16,8 +16,6 @@ namespace LemonadeStandUserStories
 
         //member modifier
 
-        {
-
         }
     }
-}
+

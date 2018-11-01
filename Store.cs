@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LemonadeStandUserStories
 {
-    public class Store : Game
+    public class Store
     {
         //members variables 
         public double lemons;
@@ -14,17 +14,114 @@ namespace LemonadeStandUserStories
         public double bagOfIce;
         public double sugar;
 
-        public void Inventory()
-        {
-            string[] productList = new string[4];
-            productList[0] = "lemons";
-            productList[1] = "cupBundle";
-            productList[2] = "bagOfIce";
-            productList[3] = "sugar";
-            Console.WriteLine(productList);
-            Console.ReadLine();
+        public string name;
+        public double price;
+        string[] productList;
+        double[] productPrice;
 
+        public Store()
+        {
+            productList = new string[4] {"Lemons", "Cups", "Ice", "Sugar" };
+            productPrice = new double[4] { 1.00, 1.00, 2.00, 3.00 };
         }
 
+        public void DisplayStore()
+        {
+            Console.WriteLine("Welcome to the store");
+            for (int i = 0; i < 4; i++)
+            {
+                Console.WriteLine(productList[i] + "Price: "+ productPrice[i]);
+            }
+        }
+
+
+        public void Purchase(Player player)
+        {
+            Console.WriteLine("press 1 to buy lemons, press 2 to buy cups");
+            var itemPurchased = Console.ReadLine();
+            switch (itemPurchased)
+            {
+                case "1":
+                    Console.WriteLine("How many lemons do you want to buy?");
+                    int numBought =  int.Parse(Console.ReadLine());
+                    BuyLemons(player, numBought);
+                    break;
+                case "2":
+                    Console.WriteLine("How many cups do you want to buy?");
+                    int numBought = int.Parse(Console.ReadLine());
+                    BuyCups(player, numBought);
+                    break;
+                case "3":
+                    Console.WriteLine("How much sugar do you want to buy?");
+                    int numBought = int.Parse(Console.ReadLine());
+                    BuyIce(player, numBought);
+                    break;
+                case "4":
+                    Console.WriteLine("How much ice do you want to buy?");
+                    int numBought = int.Parse(Console.ReadLine());
+                    BuySugar(player, numBought);
+                    break;
+                default:
+                    Console.WriteLine("Oops, Wrong input.Please choose option 1,2,3 or 4");
+                    break;
+            }
+        }
+
+        public void BuyLemons(Player player, int numBought)
+        {
+            player.inventory.lemons += numBought;
+            player.Monetary -= productPrice[0] * numBought;
+        }
+
+        public void BuyCups(Player player, int numBought)
+        {
+            player.inventory.cups += numBought;
+            player.Monetary -= productPrice[1] * numBought;
+        }
+
+        public void BuySugar(Player player, int numBought)
+        {
+            player.inventory.cupsOfSugar += numBought;
+            player.Monetary -= productPrice[1] * numBought;
+        }
+        public void BuyIce(Player player, int numBought)
+        {
+            player.inventory.ice += numBought;
+            player.Monetary -= productPrice[1] * numBought;
+        }
+
+
+        public void BuyIce(int numBought)
+        {
+            Player.inventory.lemons += numBought;
+            Player.money -= productPrice[0] * numBought;
+        }
+        public void BuySugar(int numBought)
+        {
+            Player.inventory.lemons += numBought;
+            Player.money -= productPrice[0] * numBought;
+        }
+
+
+        public void ProductPrice(string name, double price)
+        {
+            this.name = name;
+            this.price = price;
+        }
+
+        public string Name
+        {
+            get { return name; }
+            set { name = value; }
+        }
+
+        public double Price
+        {
+            get { return price; }
+            set { price = value; }
+        }
+  
     }
+
 }
+

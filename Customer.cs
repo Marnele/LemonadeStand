@@ -6,14 +6,52 @@ using System.Threading.Tasks;
 
 namespace LemonadeStandUserStories
 {
-    public class Customer
+    class Customer
     {
-        private bool thirsty;
-        private bool resident;
-        private bool spareChange;
-        private bool rain;
+        /// <summary>
+        /// I want the customer to make a purchase if they are thirsty, 
+        /// have spare change, are residents in the neighborhood, and todays weather is good.
+        /// </summary>
+        bool thirsty = true;
+        bool resident = true;
+        bool spareChange = true;
+        bool likesLemonade = true;
 
+        public void NewCustomer()
+        {
+            bool customerThirst;
+            bool customerSpareChange;
+            bool customerResidence;
+
+            int newCustomer = 0;
+            do
+            {
+                bool[] randomOne= new bool[2];
+                randomOne[0] = true;
+                randomOne[1] = false;
+                Random rnd = new Random();
+                customerThirst = randomOne[rnd.Next(1, 2)];
+                Console.WriteLine(customerThirst);
+
+                bool[] randomTwo = new bool[2];
+                randomTwo[0] = true;
+                randomTwo[1] = false;
+                Random residence = new Random();
+                customerSpareChange = randomTwo[rnd.Next(1, 2)];
+                Console.WriteLine(customerSpareChange);
+
+                bool[] randomThree = new bool[2];
+                randomTwo[0] = true;
+                randomTwo[1] = false;
+                Random customerThirsty = new Random();
+                customerResidence = randomTwo[rnd.Next(1, 2)];
+                Console.WriteLine(customerResidence);
+                newCustomer++;
+            }
+                while (newCustomer <= 100);
+
+
+        }
     }
-
 }
 

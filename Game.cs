@@ -1,18 +1,23 @@
 ﻿using System;
 namespace LemonadeStandUserStories
 {
-    public abstract class Game : Program
+    public class Game : Program
     {
-        //members variables 
-        public Player newPlayer;
+        private Player newPlayer;
         public Day newDay;
         public Store newStore;
-        public void NewGame()
+        public Game game;
 
-         //constructor
+        internal Player NewPlayer { get => newPlayer; set => newPlayer = value; }
 
-        //member modifier
+
+
+        /// <summary>
+        /// I want the player to see current inventory and daily forcast 
+        /// </summary>
+        public void ExecuteGame()
         {
+
         }
     }
 }
