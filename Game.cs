@@ -1,22 +1,34 @@
 ﻿using System;
 namespace LemonadeStandUserStories
 {
-    public class Game : Program
+    public class Game
     {
-        private Player newPlayer;
         public Day newDay;
         public Store newStore;
         public Game game;
+        public Player player;
 
-        internal Player NewPlayer { get => newPlayer; set => newPlayer = value; }
+        public Game()
+        {
+            player = new Player();
+            newDay = new Day();
+            newStore = new Store();
 
-
+        }
 
         /// <summary>
         /// I want the player to see current inventory and daily forcast 
         /// </summary>
         public void ExecuteGame()
         {
+            newStore.DisplayStore();
+            newStore.Purchase(player);
+
+        }
+        public void ExecuteDay()
+        {
+            newStore.DisplayStore();
+            newStore.Purchase(player);
 
         }
     }

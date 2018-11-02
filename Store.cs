@@ -34,17 +34,16 @@ namespace LemonadeStandUserStories
             }
         }
 
-
         public void Purchase(Player player)
         {
-            Console.WriteLine("press 1 to buy lemons, press 2 to buy cups");
+            Console.WriteLine("Press (1) to buy Lemons, \n Press (2) to buy Cups, \n Press (3) to buy Ice \n Press (4) to buy Sugar \n Press (5) to begin selling");
             var itemPurchased = Console.ReadLine();
             switch (itemPurchased)
             {
                 case "1":
-                    Console.WriteLine("How many lemons do you want to buy?");
-                    int numBought =  int.Parse(Console.ReadLine());
-                    BuyLemons(player, numBought);
+                    Console.WriteLine("How many lemons do you want to buy?"); //Ask for player input
+                    int numBought = int.Parse(Console.ReadLine()); //Creates a variable that holds parsed input
+                    BuyLemons(player, numBought); //Creates a method that receives number in a parameter
                     break;
                 case "2":
                     Console.WriteLine("How many cups do you want to buy?");
@@ -60,6 +59,10 @@ namespace LemonadeStandUserStories
                     Console.WriteLine("How much ice do you want to buy?");
                     int numBought = int.Parse(Console.ReadLine());
                     BuySugar(player, numBought);
+                    break;
+                case "5":
+                    Game game = new Game();
+                    game.ExecuteGame();
                     break;
                 default:
                     Console.WriteLine("Oops, Wrong input.Please choose option 1,2,3 or 4");
@@ -82,26 +85,13 @@ namespace LemonadeStandUserStories
         public void BuySugar(Player player, int numBought)
         {
             player.inventory.cupsOfSugar += numBought;
-            player.Monetary -= productPrice[1] * numBought;
+            player.Monetary -= productPrice[4] * numBought;
         }
         public void BuyIce(Player player, int numBought)
         {
             player.inventory.ice += numBought;
-            player.Monetary -= productPrice[1] * numBought;
+            player.Monetary -= productPrice[3] * numBought;
         }
-
-
-        public void BuyIce(int numBought)
-        {
-            Player.inventory.lemons += numBought;
-            Player.money -= productPrice[0] * numBought;
-        }
-        public void BuySugar(int numBought)
-        {
-            Player.inventory.lemons += numBought;
-            Player.money -= productPrice[0] * numBought;
-        }
-
 
         public void ProductPrice(string name, double price)
         {

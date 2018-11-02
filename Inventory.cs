@@ -8,12 +8,12 @@ namespace LemonadeStandUserStories
 {
     public class Inventory
     {
-        private int lemons;
-        private int cupsOfSugar;
-        private int cups;
-        private int ice;
-        private int pitcher;
-        private int cupsOfLemonade;
+        public int lemons;
+        public int cupsOfSugar;
+        public int cups;
+        public int ice;
+        public int pitcher;
+        public int cupsOfLemonade;
 
         //members variables 
         public void Recipe()

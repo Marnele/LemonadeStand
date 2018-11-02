@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LemonadeStandUserStories
 {
-    public abstract class Day : Game
+    public class Day
     {
         //members variables 
         public Weather Forcast;

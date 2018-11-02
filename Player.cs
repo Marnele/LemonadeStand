@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace LemonadeStandUserStories
 {
-    abstract class Player
+    public class Player
     {
         //members variables 
-        public int Monetary;
-        public int Inventory;
+        public double Monetary = 50;
+        public Inventory inventory = new Inventory();
 
 
         public abstract void PlayerResources();
