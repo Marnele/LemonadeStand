@@ -13,8 +13,7 @@ namespace LemonadeStandUserStories
         public Game game;
         public Player player;
         public Weather newWeather;
-        public Customer newCustomer;
-        public Recipe newPitcher;
+
 
         public Game()
         {
@@ -23,8 +22,7 @@ namespace LemonadeStandUserStories
             newDay = new Day();
             newStore = new Store();
             newWeather = new Weather();
-            newCustomer = new Customer();
-            newPitcher = new Recipe();
+
 
         }
 
@@ -60,7 +58,7 @@ namespace LemonadeStandUserStories
             newStore.DisplayStore();
             newStore.Purchase(player);
             newWeather.DisplayWeather();
-            newPitcher.DisplayPitcher();
+
 
 
         }
@@ -68,7 +66,7 @@ namespace LemonadeStandUserStories
         {
             newStore.Purchase(player);
             newWeather.DisplayWeather();
-            newCustomer.NewCustomer();
+
 
         }
     }
