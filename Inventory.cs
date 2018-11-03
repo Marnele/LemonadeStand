@@ -15,13 +15,8 @@ namespace LemonadeStandUserStories
         public int pitcher;
         public int cupsOfLemonade;
 
+
         //members variables 
-        public void Recipe()
-        {
-            if(lemons >= 4 && cupsOfSugar >= 1 && cups >= 1 &&  ice >= 10){
-                pitcher = 1;
-                cups = 32;
-            }
+     
         }
     }
-}

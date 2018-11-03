@@ -18,6 +18,8 @@ namespace LemonadeStandUserStories
         public double price;
         string[] productList;
         double[] productPrice;
+       
+
 
         public Store()
         {
@@ -38,6 +40,8 @@ namespace LemonadeStandUserStories
         {
             Console.WriteLine("Press (1) to buy Lemons, \n Press (2) to buy Cups, \n Press (3) to buy Ice \n Press (4) to buy Sugar \n Press (5) to begin selling");
             var itemPurchased = Console.ReadLine();
+
+
             switch (itemPurchased)
             {
                 case "1":
@@ -93,23 +97,6 @@ namespace LemonadeStandUserStories
             player.Monetary -= productPrice[3] * numBought;
         }
 
-        public void ProductPrice(string name, double price)
-        {
-            this.name = name;
-            this.price = price;
-        }
-
-        public string Name
-        {
-            get { return name; }
-            set { name = value; }
-        }
-
-        public double Price
-        {
-            get { return price; }
-            set { price = value; }
-        }
   
     }
 

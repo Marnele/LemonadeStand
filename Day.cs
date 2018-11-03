@@ -8,12 +8,14 @@ namespace LemonadeStandUserStories
 {
     public class Day
     {
-        //members variables 
-        public Weather Forcast;
+        public void DisplayStore()
+        {
+            Console.WriteLine("Welcome to the store");
+            for (int i = 0; i < 4; i++)
+            {
+                Console.WriteLine(productList[i] + "Price: " + productPrice[i]);
+            }
+        }
+    }
 
-    }  
-        
-
-
-    
 }

@@ -9,12 +9,9 @@ namespace LemonadeStandUserStories
     public class Player
     {
         //members variables 
-        public double Monetary = 50;
+        public double Monetary = 30;
         public Inventory inventory = new Inventory();
-
-
-        public abstract void PlayerResources();
-        public abstract void DailyRecipe();
-
+        public Player player = new Player();
+       
     }
 }
