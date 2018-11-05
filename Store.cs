@@ -16,8 +16,8 @@ namespace LemonadeStandUserStories
 
         public string name;
         public double price;
-        string[] productList;
-        double[] productPrice;
+        public string[] productList;
+        public double[] productPrice;
        
 
 
@@ -41,7 +41,6 @@ namespace LemonadeStandUserStories
             Console.WriteLine("Press (1) to buy Lemons, \n Press (2) to buy Cups, \n Press (3) to buy Ice \n Press (4) to buy Sugar \n Press (5) to begin selling");
             var itemPurchased = Console.ReadLine();
 
-
             switch (itemPurchased)
             {
                 case "1":
@@ -51,17 +50,17 @@ namespace LemonadeStandUserStories
                     break;
                 case "2":
                     Console.WriteLine("How many cups do you want to buy?");
-                    int numBought = int.Parse(Console.ReadLine());
+                    numBought = int.Parse(Console.ReadLine());
                     BuyCups(player, numBought);
                     break;
                 case "3":
                     Console.WriteLine("How much sugar do you want to buy?");
-                    int numBought = int.Parse(Console.ReadLine());
+                    numBought = int.Parse(Console.ReadLine());
                     BuyIce(player, numBought);
                     break;
                 case "4":
                     Console.WriteLine("How much ice do you want to buy?");
-                    int numBought = int.Parse(Console.ReadLine());
+                    numBought = int.Parse(Console.ReadLine());
                     BuySugar(player, numBought);
                     break;
                 case "5":
@@ -89,12 +88,12 @@ namespace LemonadeStandUserStories
         public void BuySugar(Player player, int numBought)
         {
             player.inventory.cupsOfSugar += numBought;
-            player.Monetary -= productPrice[4] * numBought;
+            player.Monetary -= productPrice[3] * numBought;
         }
         public void BuyIce(Player player, int numBought)
         {
             player.inventory.ice += numBought;
-            player.Monetary -= productPrice[3] * numBought;
+            player.Monetary -= productPrice[2] * numBought;
         }
 
   

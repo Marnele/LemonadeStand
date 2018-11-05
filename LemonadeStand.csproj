@@ -11,5 +11,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Monetary.cs" />
+    <Compile Remove="Customerint.cs" />
   </ItemGroup>
 </Project>

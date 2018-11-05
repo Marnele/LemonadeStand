@@ -22,8 +22,6 @@ namespace LemonadeStandUserStories
             newDay = new Day();
             newStore = new Store();
             newWeather = new Weather();
-
-
         }
 
         /// <summary>
@@ -33,11 +31,11 @@ namespace LemonadeStandUserStories
         public void ExecuteGame()
             {
                 Console.WriteLine("Are you ready to play LemonadeStand? yes/no");
-                string answer = Console.ReadLine().ToLower();
+                var answer = Console.ReadLine().ToLower();
                
                 if (answer == "yes")
                 {
-                    game.ExecuteStore();
+                   
                 }
                 else if (answer == "no")
                 {
@@ -58,8 +56,6 @@ namespace LemonadeStandUserStories
             newStore.DisplayStore();
             newStore.Purchase(player);
             newWeather.DisplayWeather();
-
-
 
         }
         public void ExecuteMarketplace()

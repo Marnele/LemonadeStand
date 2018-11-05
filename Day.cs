@@ -10,11 +10,7 @@ namespace LemonadeStandUserStories
     {
         public void DisplayStore()
         {
-            Console.WriteLine("Welcome to the store");
-            for (int i = 0; i < 4; i++)
-            {
-                Console.WriteLine(productList[i] + "Price: " + productPrice[i]);
-            }
+
         }
     }
 
